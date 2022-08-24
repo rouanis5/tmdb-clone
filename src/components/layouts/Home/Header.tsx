@@ -3,10 +3,14 @@ const background = new URL('../../../assets/images/header.jpg', import.meta.url)
   .href
 const Header = () => {
   return (
-    <Container
-      className="relative z-0 bg-cover bg-center"
-      style={{ backgroundImage: `url(${background})` }}
-    >
+    <Container className="relative z-0">
+      {/* start background-image */}
+      <img
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        src={background}
+        alt="revengers cover"
+      ></img>
+      {/* ------------- */}
       {/* start overlay */}
       <div className="absolute inset-0 -z-10 bg-primary/80"></div>
       {/* ------------- */}
