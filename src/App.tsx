@@ -1,5 +1,12 @@
+import Navbar from './components/layouts/Navbar'
+import './assets/styles/tailwind.css'
+
 function App() {
-  return <h1>hello world</h1>
+  return (
+    <>
+      <Navbar />
+    </>
+  )
 }
 
 export default App
