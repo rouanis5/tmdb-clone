@@ -1,4 +1,4 @@
-import { LinkPropsType } from "../types/links.type"
+import { LinkPropsType } from '../types/links.type'
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState: LinkPropsType[] = [
@@ -51,7 +51,7 @@ const initialState: LinkPropsType[] = [
 const navbarSlice = createSlice({
   name: 'navbar',
   initialState,
-  reducers: {}
+  reducers: {},
 })
 
 export default navbarSlice.reducer
