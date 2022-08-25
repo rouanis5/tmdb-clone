@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import navbarReducer from '../reducers/navbarSlice'
+import popularMoviesReducer from '../reducers/popularMoviesSlice'
 
 const store = configureStore({
   reducer: {
     navbar: navbarReducer,
+    popular: popularMoviesReducer,
   },
 })
 
