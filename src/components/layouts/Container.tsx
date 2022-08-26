@@ -18,7 +18,7 @@ function Container<E extends React.ElementType>({
   const Component = as || 'div'
   return (
     <Component
-      className={`container mx-auto max-w-7xl px-5 md:px-10 ${className}`}
+      className={`container mx-auto max-w-7xl px-5 md:px-10 ${className || ''}`}
       {...rest}
     >
       {children}
