@@ -13,7 +13,8 @@ const MovieCard = ({
 }: movieCardType) => (
   <div className="w-40 flex-shrink-0">
     <img
-      className="pointer-events-none w-full rounded-md shadow-sm"
+      className="pointer-events-none h-60 w-full rounded-md bg-gray-300 shadow-sm"
+      loading="lazy"
       src={'https://image.tmdb.org/t/p/w500' + poster_path}
       alt={title + 'poster'}
     />
@@ -33,7 +34,7 @@ const MovieCard = ({
       </span>
     </div>
     <div className="ml-2 mr-1">
-      <a className="font-bold leading-5" href="#">
+      <a className="font-bold" href="#">
         {title}
       </a>
       <br />
