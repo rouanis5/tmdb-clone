@@ -14,3 +14,9 @@
     @apply rounded-full bg-gray-300 hover:bg-gray-400;
   }
 }
+
+@layer utilities {
+  .header-ring {
+    @apply outline-none ring-2 ring-secondary ring-offset-4 ring-offset-primary/60;
+  }
+}

@@ -24,7 +24,7 @@ const Header = () => {
         <form className="relative w-full">
           <input
             type="text"
-            className="w-full rounded-full px-5 py-3 outline-none placeholder:text-gray-500"
+            className="focus:header-ring w-full rounded-full px-5 py-3 outline-none placeholder:text-gray-500"
             placeholder="Search for a movie, tv show, person......"
             spellCheck="false"
             autoCorrect="false"
@@ -32,7 +32,7 @@ const Header = () => {
           />
           <input
             type="submit"
-            className="absolute inset-y-0 right-0 rounded-full bg-gradient-to-br from-tertiary to-secondary px-6 font-semibold text-white hover:text-primary"
+            className="focus:header-ring absolute inset-y-0 right-0 rounded-full bg-gradient-to-br from-tertiary to-secondary px-6 font-semibold text-white hover:text-primary"
             value="Search"
           />
         </form>
