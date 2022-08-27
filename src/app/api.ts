@@ -7,6 +7,7 @@ const appAxios = axios.create({
   },
   params: {
     api_key: API_KEY,
+    watch_region: 'US',
     language: 'en-US',
   },
 })

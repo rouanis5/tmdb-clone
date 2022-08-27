@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { movieType } from '../../../types/tmdb.type'
 
 type movieCardType = Pick<
@@ -11,7 +12,13 @@ const MovieCard = ({
   poster_path,
   vote_average,
 }: movieCardType) => (
-  <div className="w-40 flex-shrink-0">
+  <motion.div
+    layout="position"
+    className="w-40 flex-shrink-0"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+  >
     <img
       className="pointer-events-none h-60 w-full rounded-md bg-gray-300 shadow-sm"
       loading="lazy"
@@ -42,7 +49,7 @@ const MovieCard = ({
         {release_date}
       </a>
     </div>
-  </div>
+  </motion.div>
 )
 
 export default MovieCard
