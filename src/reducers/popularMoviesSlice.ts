@@ -16,14 +16,42 @@ const initialState: InitialState = {
 // Generates pending, fulfilled and rejected action types
 export const fetchPopStreaming = createAsyncThunk(
   'popular/fetchPopStreaming',
-  () => {
-    return appAxios
-      .get('/movie/now_playing', {
-        params: {
-          page: 1,
-        },
-      })
-      .then((res) => res.data)
+  async () => {
+    const res = await appAxios.get('discover/movie', {
+      params: {
+        sort_by: 'popularity.desc',
+        with_watch_monetization_types: 'flatrate',
+        page: 1,
+      },
+    })
+    return res.data
+  }
+)
+
+export const fetchPopForRent = createAsyncThunk(
+  'popular/fetchPopForRent',
+  async () => {
+    const res = await appAxios.get('/discover/movie', {
+      params: {
+        sort_by: 'popularity.desc',
+        with_release_type: '3|2',
+        page: 1,
+      },
+    })
+    return res.data
+  }
+)
+
+export const fetchPopInTheater = createAsyncThunk(
+  'popular/fetchPopInTheater',
+  async () => {
+    const res = await appAxios.get('/discover/movie', {
+      params: {
+        with_watch_monetization_types: 'ads|buy',
+        page: 1,
+      },
+    })
+    return res.data
   }
 )
 
@@ -32,22 +60,26 @@ const popularSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchPopStreaming.pending, (state) => {
-      state.loading = true
-    })
-    builder.addCase(
-      fetchPopStreaming.fulfilled,
-      (state, action: PayloadAction<tmdbDataType>) => {
-        state.loading = false
-        state.data = action.payload
-        state.error = ''
+    ;[fetchPopStreaming, fetchPopForRent, fetchPopInTheater].forEach(
+      (dispatcher) => {
+        builder.addCase(dispatcher.pending, (state) => {
+          state.loading = true
+        })
+        builder.addCase(
+          dispatcher.fulfilled,
+          (state, action: PayloadAction<tmdbDataType>) => {
+            state.loading = false
+            state.data = action.payload
+            state.error = ''
+          }
+        )
+        builder.addCase(dispatcher.rejected, (state, action) => {
+          state.loading = false
+          state.data = {}
+          state.error = action.error.message || 'Something went wrong'
+        })
       }
     )
-    builder.addCase(fetchPopStreaming.rejected, (state, action) => {
-      state.loading = false
-      state.data = {}
-      state.error = action.error.message || 'Something went wrong'
-    })
   },
 })
 
