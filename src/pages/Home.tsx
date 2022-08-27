@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <Header />
-      <MoviesSlider />
+      <MoviesSlider title="What's Popular"  />
     </div>
   )
 }

@@ -23,7 +23,7 @@ const MovieCard = ({
       className="pointer-events-none h-60 w-full rounded-md bg-gray-300 shadow-sm"
       loading="lazy"
       src={'https://image.tmdb.org/t/p/w500' + poster_path}
-      alt={title + 'poster'}
+      alt={title + ' poster'}
     />
     <div
       className="daisy-radial-progress ml-2 -mt-7 mb-2 border-4 border-black bg-black text-sm text-green-500"
