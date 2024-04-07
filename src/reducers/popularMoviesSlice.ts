@@ -1,4 +1,4 @@
-import appAxios from '../app/api'
+import appAxios from '../helpers/api'
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import { tmdbDataType } from '../types/tmdb.type'
 

@@ -2,7 +2,7 @@ import { NavDataType } from '../../../types/moviesNav.type'
 import { PopularDispatcherType } from '../../../types/dispatcher.type'
 
 import { useEffect, useRef, useState } from 'react'
-import { useAppDispatch } from '../../../app/hooks'
+import { useAppDispatch } from '../../../helpers/hooks'
 
 const MovieSliderNav = ({ navData }: { navData: NavDataType[] }) => {
   const dispatch = useAppDispatch()

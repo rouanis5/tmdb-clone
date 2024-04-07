@@ -1,6 +1,6 @@
 import NavbarLink from './NavbarLink'
 import Container from './Container'
-import { useAppSelector } from '../../app/hooks'
+import { useAppSelector } from '../../helpers/hooks'
 
 const logo = new URL('../../assets/images/logo/alt-short.svg', import.meta.url)
   .href

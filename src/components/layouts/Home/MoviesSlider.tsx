@@ -1,12 +1,12 @@
-import { useAppSelector } from '../../../app/hooks'
+import { useAppSelector } from '../../../helpers/hooks'
 import MovieSliderNav from './MoviesSliderNav'
 import Container from '../Container'
 import MovieCard from './MovieCard'
 import SkeletonMovieCard from './SkeletonMovieCard'
 import { AnimatePresence } from 'framer-motion'
 
-const MoviesSlider = ({ title }: { title: string}) => {
-  const { data, loading, error } = useAppSelector(state => state.popular)
+const MoviesSlider = ({ title }: { title: string }) => {
+  const { data, loading, error } = useAppSelector((state) => state.popular)
   const navData = useAppSelector((state) => state.moviesNav)
 
   return (
