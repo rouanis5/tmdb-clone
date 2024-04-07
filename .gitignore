@@ -23,5 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# nextjs
+.next
+next-env.d.ts
+dist
+
 # user preferences
+.env
 env.ts

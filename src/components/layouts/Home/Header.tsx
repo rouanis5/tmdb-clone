@@ -1,6 +1,5 @@
 import Container from '../Container'
-const background = new URL('../../../assets/images/header.jpg', import.meta.url)
-  .href
+const background = '/header.jpg'
 const Header = () => {
   return (
     <Container className="relative z-0">
