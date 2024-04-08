@@ -1,3 +1,4 @@
+'use client'
 import NavbarLink from './NavbarLink'
 import Container from './Container'
 import { useAppSelector } from '../../helpers/hooks'
