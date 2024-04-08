@@ -1,8 +1,11 @@
+import '../index.css'
 import { Metadata } from 'next'
+import Navbar from '../components/layouts/Navbar'
+import Providers from '../components/Providers'
 
 export const metadata: Metadata = {
-  title: 'My App',
-  description: 'My App is a...',
+  title: 'TMDB clone',
+  description: 'My App is a clone of TMDB',
 }
 
 export default function RootLayout({
@@ -25,10 +28,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
-        <title>Your movies</title>
       </head>
       <body className="bg-slate-100">
-        <div id="root">{children}</div>
+        <div id="root">
+          <Providers>
+            <Navbar />
+            {children}
+          </Providers>
+        </div>
       </body>
     </html>
   )

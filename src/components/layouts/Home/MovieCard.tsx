@@ -1,3 +1,4 @@
+'use client'
 import { motion } from 'framer-motion'
 import { movieType } from '../../../types/tmdb.type'
 import { useMemo } from 'react'
@@ -13,8 +14,6 @@ const MovieCard = ({
   poster_path,
   vote_average,
 }: movieCardType) => {
-  const vote_percentage = useMemo(() => vote_average * 10, [vote_average])
-
   return (
     <motion.div
       layout="position"
@@ -33,14 +32,14 @@ const MovieCard = ({
         className="daisy-radial-progress ml-2 -mt-7 mb-2 border-4 border-black bg-black text-sm text-green-500"
         style={
           {
-            '--value': vote_percentage,
+            '--value': vote_average * 10,
             '--size': '2.3rem',
             '--thickness': '2px',
           } as React.CSSProperties
         }
       >
         <span className="text-white">
-          {Math.ceil(vote_percentage)}
+          {Math.ceil(vote_average * 10)}
           <span className="mb-1 text-[.5em]">%</span>
         </span>
       </div>

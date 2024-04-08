@@ -1,3 +1,4 @@
+'use client'
 import { useAppSelector } from '../../../helpers/hooks'
 import MovieSliderNav from './MoviesSliderNav'
 import Container from '../Container'

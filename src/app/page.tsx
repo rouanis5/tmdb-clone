@@ -1,13 +1,11 @@
 import Header from '../components/layouts/Home/Header'
 import MoviesSlider from '../components/layouts/Home/MoviesSlider'
 
-function Home() {
+export default function page() {
   return (
     <div>
       <Header />
-      <MoviesSlider title="What's Popular"  />
+      <MoviesSlider title="What's Popular" />
     </div>
   )
 }
-
-export default Home

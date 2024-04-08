@@ -1,3 +1,4 @@
+'use client'
 import { NavDataType } from '../../../types/moviesNav.type'
 import { PopularDispatcherType } from '../../../types/dispatcher.type'
 
