@@ -4,7 +4,7 @@ import MovieSliderNav from './MoviesSliderNav'
 import Container from '../Container'
 import MovieCard from './MovieCard'
 import SkeletonMovieCard from './SkeletonMovieCard'
-import { AnimatePresence } from 'framer-motion'
+// import { AnimatePresence } from 'framer-motion'
 
 const MoviesSlider = ({ title }: { title: string }) => {
   const { data, loading, error } = useAppSelector((state) => state.popular)
@@ -27,25 +27,25 @@ const MoviesSlider = ({ title }: { title: string }) => {
           {/* right white shadow */}
           <span className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-white/0 to-slate-100/100"></span>
           {error && <h2>{error}</h2>}
-          <AnimatePresence>
-            {data?.results?.map(
-              ({
-                id,
-                title: t,
-                release_date: rd,
-                poster_path: pp,
-                vote_average: va,
-              }) => (
-                <MovieCard
-                  key={id}
-                  title={t}
-                  release_date={rd}
-                  poster_path={pp}
-                  vote_average={va}
-                />
-              )
-            )}
-          </AnimatePresence>
+          {/* <AnimatePresence> */}
+          {data?.results?.map(
+            ({
+              id,
+              title: t,
+              release_date: rd,
+              poster_path: pp,
+              vote_average: va,
+            }) => (
+              <MovieCard
+                key={id}
+                title={t}
+                release_date={rd}
+                poster_path={pp}
+                vote_average={va}
+              />
+            )
+          )}
+          {/* </AnimatePresence> */}
           {loading &&
             [...Array(20)].map((e, i) => <SkeletonMovieCard key={i} />)}
         </Container>

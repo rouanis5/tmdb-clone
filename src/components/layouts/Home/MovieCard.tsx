@@ -1,7 +1,5 @@
-'use client'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { movieType } from '../../../types/tmdb.type'
-import { useMemo } from 'react'
 
 type movieCardType = Pick<
   movieType,
@@ -15,13 +13,14 @@ const MovieCard = ({
   vote_average,
 }: movieCardType) => {
   return (
-    <motion.div
-      layout="position"
-      className="w-40 flex-shrink-0"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    // <motion.div
+    //   layout="position"
+    //   className="w-40 flex-shrink-0"
+    //   initial={{ opacity: 0 }}
+    //   animate={{ opacity: 1 }}
+    //   exit={{ opacity: 0 }}
+    // >
+    <div className="w-40 flex-shrink-0">
       <img
         className="pointer-events-none h-60 w-full rounded-md bg-gray-300 shadow-sm"
         loading="lazy"
@@ -52,7 +51,7 @@ const MovieCard = ({
           {release_date}
         </a>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
