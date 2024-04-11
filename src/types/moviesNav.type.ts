@@ -1,7 +1,6 @@
-import { PopularDispatcherType } from './dispatcher.type'
 export type NavDataType = {
   id: number
   name: string
-  dispatcher: PopularDispatcherType
+  tag: string
   current?: boolean
 }

@@ -1,10 +1,30 @@
-// import MovieSliderNav from './MoviesSliderNav'
+import MovieSliderNav from './MoviesSliderNav'
 import Container from '../Container'
 import MovieCard from './MovieCard'
 import SkeletonMovieCard from './SkeletonMovieCard'
 import movieService from '../../../services/moviesService'
 import { Suspense } from 'react'
+import { NavDataType } from '../../../types/moviesNav.type'
 // import { AnimatePresence } from 'framer-motion'
+
+const navData: NavDataType[] = [
+  {
+    id: 1,
+    name: 'streaming',
+    tag: 'pop',
+  },
+  // { id: 2, name: 'On TV', dispatcher: fetchPopOnTv() },
+  {
+    id: 3,
+    name: 'For Rent',
+    tag: 'rent',
+  },
+  {
+    id: 4,
+    name: 'In Theaters',
+    tag: 'theater',
+  },
+]
 
 async function MoviesRow({ tag }: { tag?: string }) {
   const data = await movieService
@@ -34,12 +54,18 @@ async function MoviesRow({ tag }: { tag?: string }) {
   )
 }
 
-export default function MoviesSlider({ title }: { title: string }) {
+export default function MoviesSlider({
+  title,
+  tag,
+}: {
+  title: string
+  tag?: string
+}) {
   return (
     <div className="my-14">
       <Container className="mb-4 flex items-center gap-x-6">
         <h2 className="text-2xl font-semibold">{title}</h2>
-        {/* <MovieSliderNav navData={navData} /> */}
+        <MovieSliderNav navData={navData} />
       </Container>
       <Container className="relative !px-0">
         <Container
@@ -56,7 +82,7 @@ export default function MoviesSlider({ title }: { title: string }) {
               <SkeletonMovieCard key={i} />
             ))}
           >
-            <MoviesRow />
+            <MoviesRow tag={tag} />
           </Suspense>
           {/* <AnimatePresence> */}
         </Container>
