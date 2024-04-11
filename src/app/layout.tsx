@@ -1,7 +1,6 @@
 import '../index.css'
 import { Metadata } from 'next'
 import Navbar from '../components/layouts/Navbar'
-import Providers from '../components/Providers'
 
 export const metadata: Metadata = {
   title: 'TMDB clone',
@@ -31,10 +30,8 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-100">
         <div id="root">
-          <Providers>
-            <Navbar />
-            {children}
-          </Providers>
+          <Navbar />
+          {children}
         </div>
       </body>
     </html>
