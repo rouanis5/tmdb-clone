@@ -1,12 +1,58 @@
 'use client'
 import NavbarLink from './NavbarLink'
 import Container from './Container'
-import { useAppSelector } from '../../helpers/hooks'
+import { LinkPropsType } from '../../types/links.type'
 
 const logo = '/logo/alt-short.svg'
 
+const links: LinkPropsType[] = [
+  {
+    name: 'movies',
+    url: '#',
+    subLinks: [
+      {
+        name: 'popular',
+        url: '#',
+      },
+      {
+        name: 'now playing',
+        url: '#',
+      },
+      {
+        name: 'upcoming',
+        url: '#',
+      },
+      {
+        name: 'top rated',
+        url: '#',
+      },
+    ],
+  },
+  {
+    name: 'TV shows',
+    url: '#',
+    subLinks: [
+      {
+        name: 'popular',
+        url: '#',
+      },
+      {
+        name: 'airing today',
+        url: '#',
+      },
+      {
+        name: 'on TV',
+        url: '#',
+      },
+      {
+        name: 'top rated',
+        url: '#',
+      },
+    ],
+  },
+]
+
 const Navbar = () => {
-  const links = useAppSelector((state) => state.navbar)
   return (
     <nav className="sticky top-0 z-10 bg-primary py-3">
       <Container className="flex items-center justify-between">
