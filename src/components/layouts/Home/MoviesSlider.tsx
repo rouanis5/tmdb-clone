@@ -1,3 +1,4 @@
+'use client'
 import MovieSliderNav from './MoviesSliderNav'
 import Container from '../Container'
 import MovieCard from './MovieCard'
@@ -5,7 +6,7 @@ import SkeletonMovieCard from './SkeletonMovieCard'
 import movieService from '../../../services/moviesService'
 import { Suspense } from 'react'
 import { NavDataType } from '../../../types/moviesNav.type'
-// import { AnimatePresence } from 'framer-motion'
+import Autoanimate from '../Autoanimate'
 
 const navData: NavDataType[] = [
   {
@@ -54,6 +55,16 @@ async function MoviesRow({ tag }: { tag?: string }) {
   )
 }
 
+function MoviesRowFallback() {
+  return (
+    <>
+      {[...Array(10)].map((_, i) => (
+        <SkeletonMovieCard key={i} />
+      ))}
+    </>
+  )
+}
+
 export default function MoviesSlider({
   title,
   tag,
@@ -68,23 +79,16 @@ export default function MoviesSlider({
         <MovieSliderNav navData={navData} />
       </Container>
       <Container className="relative !px-0">
-        <Container
-          // drag='x'
-          // dragConstraints={{right: 0, left: (-carousel.current?.scrollWidth + carousel.current?.offsetWidth)}}
-          className="flex gap-x-5 overflow-x-auto overflow-y-hidden pt-3 pb-10"
-        >
+        <Container className="flex gap-x-5 overflow-x-auto overflow-y-hidden pt-3 pb-10">
           {/* left white shadow */}
           <span className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-l from-white/0 to-slate-100/100"></span>
           {/* right white shadow */}
           <span className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-white/0 to-slate-100/100"></span>
-          <Suspense
-            fallback={[...Array(10)].map((e, i) => (
-              <SkeletonMovieCard key={i} />
-            ))}
-          >
-            <MoviesRow tag={tag} />
+          <Suspense fallback={<MoviesRowFallback />}>
+            <Autoanimate className="flex gap-x-5">
+              <MoviesRow tag={tag} />
+            </Autoanimate>
           </Suspense>
-          {/* <AnimatePresence> */}
         </Container>
       </Container>
     </div>
