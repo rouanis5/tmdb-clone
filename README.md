@@ -2,6 +2,15 @@
 
 a cutting-edge movie database website clone crafted with the latest technologies. Explore a vast collection of films with ease through our intuitive interface and sleek design. Dive into a world of cinematic wonders with attractive UI features that enhance your browsing experience.
 
+## Tasks
+
+- [ ] fix the tag searchParameter on first load
+- [ ] make footer
+- [ ] use nextJs Image component
+- [ ] install shadcn
+- [ ] make movie modal or drawer
+- [ ] add favorite movies with a toast msg (locally)
+
 ## getting started
 
 ```bash
