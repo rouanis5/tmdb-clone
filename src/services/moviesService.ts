@@ -1,3 +1,4 @@
+import 'server-only'
 import appAxios from '../helpers/api'
 import { tmdbDataType } from '../types/tmdb.type'
 
