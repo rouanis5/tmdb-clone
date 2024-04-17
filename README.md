@@ -4,7 +4,7 @@ a cutting-edge movie database website clone crafted with the latest technologies
 
 ## Tasks
 
-- [ ] fix the tag searchParameter on first load
+- [x] fix the tag searchParameter on first load
 - [ ] make footer
 - [ ] use nextJs Image component
 - [ ] install shadcn
