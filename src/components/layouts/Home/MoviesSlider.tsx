@@ -26,10 +26,14 @@ const navData: NavDataType[] = [
 ]
 
 async function AsyncMoviesRow(props: { tag?: string }) {
-  const data = await movieService.fetchByTag(props.tag)
+  const data = await movieService.fetchByTag(props.tag).catch((e) => null)
 
+  if (data === null) {
+    return <div>something went wrong!</div>
+  }
   return <MoviesRow data={data} />
 }
+
 function MoviesRowFallback() {
   return (
     <>
