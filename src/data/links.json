@@ -1,0 +1,39 @@
+[
+  {
+    "name": "services",
+    "links": [
+      {
+        "name": "frontend",
+        "href": "https://rouanis5.vercel.app/services/frontend"
+      },
+      {
+        "name": "backend",
+        "href": "https://rouanis5.vercel.app/services/backend"
+      },
+      {
+        "name": "ux/ui design",
+        "href": "https://rouanis5.vercel.app/services/design"
+      },
+      {
+        "name": "desktop",
+        "href": "https://rouanis5.vercel.app/services/desktop"
+      }
+    ]
+  },
+  {
+    "name": "pages",
+    "links": [
+      { "name": "homepage", "href": "https://rouanis5.vercel.app/" },
+      { "name": "about", "href": "https://rouanis5.vercel.app/about" },
+      {
+        "name": "portfolio",
+        "href": "https://rouanis5.vercel.app/portfolio"
+      },
+      {
+        "name": "experiments",
+        "href": "https://rouanis5.vercel.app/experiments"
+      },
+      { "name": "blog", "href": "https://rouanis5.vercel.app/blogs" }
+    ]
+  }
+]
