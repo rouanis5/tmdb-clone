@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '@/components/layouts/Container'
 import links from '@/data/links.json'
 import config from '@/data/config.json'
+import { MoveUpRight } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -130,15 +131,16 @@ function FooterCard(props: { className?: string; children: React.ReactNode }) {
 
 function FooterLink(props: { name?: string; href?: string; target?: string }) {
   return (
-    <span className="space-x-3">
-      <span className="inline-block">-</span>
-      <a
-        className="capitalize font-light hover:underline leading-snug hover:font-normal"
-        href={props.href}
-        target={props.target}
-      >
-        {props.name}
-      </a>
-    </span>
+    <a
+      className="capitalize font-light hover:underline leading-snug hover:font-normal space-x-2 group"
+      href={props.href}
+      target={props.target}
+    >
+      <span>{props.name}</span>
+      <MoveUpRight
+        className="inline-block transition-transform group-hover:translate-x-1"
+        size={12}
+      />
+    </a>
   )
 }
