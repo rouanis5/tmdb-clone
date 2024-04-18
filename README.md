@@ -5,11 +5,13 @@ a cutting-edge movie database website clone crafted with the latest technologies
 ## Tasks
 
 - [x] fix the tag searchParameter on first load
-- [ ] make footer
+- [x] make footer
+- [x] deploy to vercel
 - [ ] use nextJs Image component
 - [ ] install shadcn
 - [ ] make movie modal or drawer
 - [ ] add favorite movies with a toast msg (locally)
+- [ ] add upstash rate limiter
 
 ## getting started
 

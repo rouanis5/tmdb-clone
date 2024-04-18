@@ -12,7 +12,6 @@ const navData: NavDataType[] = [
     name: 'streaming',
     tag: 'pop',
   },
-  // { id: 2, name: 'On TV', dispatcher: fetchPopOnTv() },
   {
     id: 3,
     name: 'For Rent',
@@ -64,6 +63,7 @@ export default function MoviesSlider({
           {/* right white shadow */}
           <span className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-white/0 to-slate-100/100"></span>
           <Suspense fallback={<MoviesRowFallback />}>
+            {/* @ts-expect-error Server Component */}
             <AsyncMoviesRow tag={tag} />
           </Suspense>
         </Container>
