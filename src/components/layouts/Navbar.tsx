@@ -1,7 +1,7 @@
 'use client'
-import NavbarLink from './NavbarLink'
-import Container from './Container'
-import { LinkPropsType } from '../../types/links.type'
+import NavbarLink from '@/components/layouts/NavbarLink'
+import Container from '@/components/layouts/Container'
+import { LinkPropsType } from '@/types/links.type'
 
 const logo = '/logo/alt-short.svg'
 

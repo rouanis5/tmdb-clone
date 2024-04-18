@@ -1,6 +1,6 @@
 'use client'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { NavDataType } from '../../../types/moviesNav.type'
+import { NavDataType } from '@/types/moviesNav.type'
 import { useEffect, useRef, useState } from 'react'
 
 const MovieSliderNav = ({ navData }: { navData: NavDataType[] }) => {

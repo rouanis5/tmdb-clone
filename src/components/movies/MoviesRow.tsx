@@ -1,7 +1,7 @@
 'use client'
-import { tmdbDataType } from '../../../types/tmdb.type'
-import Autoanimate from '../Autoanimate'
-import MovieCard from './MovieCard'
+import { tmdbDataType } from '@/types/tmdb.type'
+import Autoanimate from '@/components/layouts/Autoanimate'
+import MovieCard from '@/components/movies/MovieCard'
 
 export default function MoviesRow(props: { data?: tmdbDataType }) {
   return (

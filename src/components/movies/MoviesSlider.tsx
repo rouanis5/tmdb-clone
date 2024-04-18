@@ -1,9 +1,9 @@
-import MovieSliderNav from './MoviesSliderNav'
-import Container from '../Container'
-import SkeletonMovieCard from './SkeletonMovieCard'
+import MovieSliderNav from '@/components/movies/MoviesSliderNav'
+import Container from '@/components/layouts/Container'
+import SkeletonMovieCard from '@/components/movies/SkeletonMovieCard'
 import { Suspense } from 'react'
-import { NavDataType } from '../../../types/moviesNav.type'
-import movieService from '../../../services/moviesService'
+import { NavDataType } from '@/types/moviesNav.type'
+import movieService from '@/services/moviesService'
 import MoviesRow from './MoviesRow'
 
 const navData: NavDataType[] = [

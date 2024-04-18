@@ -1,6 +1,6 @@
 import 'server-only'
-import appAxios from '../helpers/api'
-import { tmdbDataType } from '../types/tmdb.type'
+import appAxios from '@/helpers/api'
+import { tmdbDataType } from '@/types/tmdb.type'
 
 abstract class IMoviesService {
   async fetchByTag(tag?: string): Promise<tmdbDataType> {

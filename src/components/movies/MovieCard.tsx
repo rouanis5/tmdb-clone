@@ -1,6 +1,6 @@
 // import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { movieType } from '../../../types/tmdb.type'
+import { movieType } from '@/types/tmdb.type'
 
 type movieCardType = Pick<
   movieType,

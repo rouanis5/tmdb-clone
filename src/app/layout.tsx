@@ -1,7 +1,7 @@
-import '../index.css'
+import '@/index.css'
 import { Metadata } from 'next'
-import Navbar from '../components/layouts/Navbar'
-import Footer from '../components/layouts/Footer'
+import Navbar from '@/components/layouts/Navbar'
+import Footer from '@/components/layouts/Footer'
 
 export const metadata: Metadata = {
   title: 'TMDB clone',

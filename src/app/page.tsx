@@ -1,5 +1,5 @@
-import Header from '../components/layouts/Home/Header'
-import MoviesSlider from '../components/layouts/Home/MoviesSlider'
+import Header from '@/components/movies/Header'
+import MoviesSlider from '@/components/movies/MoviesSlider'
 
 export default function page({
   searchParams,

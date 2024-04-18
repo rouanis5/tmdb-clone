@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import Container from '../Container'
+import Container from '@/components/layouts/Container'
+
 const background = '/header.jpg'
 const Header = () => {
   return (

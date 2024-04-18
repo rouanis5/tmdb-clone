@@ -1,5 +1,6 @@
 import axios from 'axios'
-import API_KEY from '../env'
+import API_KEY from '@/env'
+
 const appAxios = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   headers: {

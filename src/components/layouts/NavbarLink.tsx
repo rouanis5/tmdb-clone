@@ -1,4 +1,4 @@
-import { LinkPropsType } from '../../types/links.type'
+import { LinkPropsType } from '@/types/links.type'
 
 const NavbarLink = ({ name, url, subLinks }: LinkPropsType) => {
   return (

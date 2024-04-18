@@ -1,7 +1,7 @@
-import React, { Children } from 'react'
-import Container from './Container'
-import links from '../../data/links.json'
-import config from '../../data/config.json'
+import React from 'react'
+import Container from '@/components/layouts/Container'
+import links from '@/data/links.json'
+import config from '@/data/config.json'
 
 export default function Footer() {
   return (
