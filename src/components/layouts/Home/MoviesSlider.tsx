@@ -59,9 +59,9 @@ export default function MoviesSlider({
       <Container className="relative !px-0">
         <Container className="flex gap-x-5 overflow-x-auto overflow-y-hidden pt-3 pb-10">
           {/* left white shadow */}
-          <span className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-l from-white/0 to-slate-100/100"></span>
+          <span className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-l from-white/0 to-slate-100/100 z-10"></span>
           {/* right white shadow */}
-          <span className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-white/0 to-slate-100/100"></span>
+          <span className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-white/0 to-slate-100/100 z-10"></span>
           <Suspense fallback={<MoviesRowFallback />}>
             {/* @ts-expect-error Server Component */}
             <AsyncMoviesRow tag={tag} />

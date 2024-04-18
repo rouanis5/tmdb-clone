@@ -1,4 +1,5 @@
 // import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { movieType } from '../../../types/tmdb.type'
 
 type movieCardType = Pick<
@@ -21,9 +22,10 @@ const MovieCard = ({
     //   exit={{ opacity: 0 }}
     // >
     <div className="w-40 flex-shrink-0">
-      <img
-        className="pointer-events-none h-60 w-full rounded-md bg-gray-300 shadow-sm"
-        loading="lazy"
+      <Image
+        className="pointer-events-none h-60 w-full object-contain rounded-md bg-gray-300 shadow-sm"
+        width={160}
+        height={338}
         src={'https://image.tmdb.org/t/p/w500' + poster_path}
         alt={title + ' poster'}
       />

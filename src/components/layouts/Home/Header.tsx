@@ -1,14 +1,17 @@
+import Image from 'next/image'
 import Container from '../Container'
 const background = '/header.jpg'
 const Header = () => {
   return (
     <Container className="relative z-0">
       {/* start background-image */}
-      <img
+      <Image
         className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
         src={background}
+        fill
+        sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, 1536px"
         alt="revengers cover"
-      ></img>
+      />
       {/* ------------- */}
       {/* start overlay */}
       <div className="absolute inset-0 -z-10 bg-primary/80"></div>
