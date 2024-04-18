@@ -2,6 +2,7 @@
 import NavbarLink from '@/components/layouts/NavbarLink'
 import Container from '@/components/layouts/Container'
 import { LinkPropsType } from '@/types/links.type'
+import Link from 'next/link'
 
 const logo = '/logo/alt-short.svg'
 
@@ -58,9 +59,9 @@ const Navbar = () => {
       <Container className="flex items-center justify-between">
         <ul className="flex items-center gap-x-5">
           <li>
-            <a href="#">
+            <Link href="/">
               <img className="block w-40" src={logo} alt="" />
-            </a>
+            </Link>
           </li>
           {links.map(({ name, url, subLinks }) => {
             return (

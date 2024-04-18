@@ -1,4 +1,5 @@
 import { LinkPropsType } from '@/types/links.type'
+import Link from 'next/link'
 
 const NavbarLink = ({ name, url, subLinks }: LinkPropsType) => {
   return (
@@ -14,7 +15,7 @@ const NavbarLink = ({ name, url, subLinks }: LinkPropsType) => {
                 key={name}
                 className="flex break-inside-avoid whitespace-nowrap px-7 py-1 text-sm hover:bg-gray-100"
               >
-                <a href={url}>{name}</a>
+                <Link href={url}>{name}</Link>
               </li>
             )
           })}

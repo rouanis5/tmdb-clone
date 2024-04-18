@@ -12,7 +12,7 @@ a cutting-edge movie database website clone crafted with the latest technologies
 - [x] make footer
 - [x] deploy to vercel <!-- after changing some vercel build folder -->
 - [x] use nextJs Image component
-- [ ] install shadcn
+- [x] install shadcn
 - [ ] make movie modal or drawer
 - [ ] add favorite movies with a toast msg (locally)
 - [ ] add upstash rate limiter
