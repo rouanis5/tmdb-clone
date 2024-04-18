@@ -3,57 +3,44 @@ import NavbarLink from '@/components/layouts/NavbarLink'
 import Container from '@/components/layouts/Container'
 import { LinkPropsType } from '@/types/links.type'
 import Link from 'next/link'
+import config from '@/data/config.json'
 
 const logo = '/logo/alt-short.svg'
 
 const links: LinkPropsType[] = [
   {
     name: 'movies',
-    url: '#',
+    url: '/',
     subLinks: [
       {
         name: 'popular',
-        url: '#',
+        url: '/?tag=pop',
       },
       {
-        name: 'now playing',
-        url: '#',
+        name: 'for rent',
+        url: '/?tag=rent',
       },
       {
-        name: 'upcoming',
-        url: '#',
-      },
-      {
-        name: 'top rated',
-        url: '#',
+        name: 'in theaters',
+        url: '/?tag=theater',
       },
     ],
   },
   {
-    name: 'TV shows',
-    url: '#',
+    name: 'About',
+    url: config.PUBLIC_PORTFOLIO + '/about',
     subLinks: [
       {
-        name: 'popular',
-        url: '#',
+        name: 'portfolio',
+        url: config.PUBLIC_PORTFOLIO,
       },
-      {
-        name: 'airing today',
-        url: '#',
-      },
-      {
-        name: 'on TV',
-        url: '#',
-      },
-      {
-        name: 'top rated',
-        url: '#',
-      },
+      { name: 'linkedin', url: config.PUBLIC_LINKEDIN },
+      { name: 'github', url: config.PUBLIC_GITHUB },
     ],
   },
 ]
 
-const Navbar = () => {
+function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-primary py-3">
       <Container className="flex items-center justify-between">
