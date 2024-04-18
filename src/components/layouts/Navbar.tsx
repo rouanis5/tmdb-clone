@@ -55,7 +55,7 @@ const links: LinkPropsType[] = [
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-10 bg-primary py-3">
+    <nav className="sticky top-0 z-50 bg-primary py-3">
       <Container className="flex items-center justify-between">
         <ul className="flex items-center gap-x-5">
           <li>
