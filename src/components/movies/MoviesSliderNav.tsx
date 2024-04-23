@@ -36,7 +36,7 @@ const MovieSliderNav = ({ navData }: { navData: NavDataType[] }) => {
   }, [tag])
 
   return (
-    <ul className="relative flex overflow-hidden rounded-full border border-black">
+    <ul className="relative flex w-fit overflow-hidden rounded-full border border-black">
       <li
         ref={listItemRef}
         className="absolute inset-y-0 -z-10 inline-block w-0 rounded-full bg-primary transition-all"

@@ -6,7 +6,7 @@ import MovieCard from '@/components/movies/MovieCard'
 export default function MoviesRow(props: { data?: tmdbDataType }) {
   return (
     <>
-      <Autoanimate className="flex gap-x-5">
+      <Autoanimate className="flex  gap-x-5">
         {props.data?.results?.map(
           ({
             id,
