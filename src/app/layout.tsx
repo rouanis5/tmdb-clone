@@ -2,6 +2,7 @@ import '@/index.css'
 import { Metadata } from 'next'
 import Navbar from '@/components/layouts/Navbar'
 import Footer from '@/components/layouts/Footer'
+import { Toaster } from '@/components/ui/sonner'
 
 export const metadata: Metadata = {
   title: 'TMDB clone',
@@ -30,11 +31,10 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-slate-100">
-        <div id="root">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <Navbar />
+        {children}
+        <Footer />
+        <Toaster />
       </body>
     </html>
   )

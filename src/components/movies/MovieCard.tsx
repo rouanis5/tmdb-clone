@@ -1,4 +1,3 @@
-// import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { movieType } from '@/types/tmdb.type'
 import {
@@ -12,13 +11,33 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer'
 import { Button } from '@/components/ui/button'
-import { Heart } from 'lucide-react'
+import { Heart, WifiOff } from 'lucide-react'
+import { toast } from 'sonner'
 
 type movieCardType = Pick<
   movieType,
   'title' | 'release_date' | 'poster_path' | 'vote_average'
 >
 
+function like(title: string) {
+  toast(
+    <span className="flex items-center gap-x-4">
+      <WifiOff />
+      <span className="capitalize font-medium">Network error</span>
+    </span>,
+    {
+      description: 'failed to add to favorite movies',
+    }
+  )
+
+  toast(`${title} will be like later`, {
+    description: new Date().toDateString(),
+    action: {
+      label: 'undo',
+      onClick: () => toast('Action is cancelled'),
+    },
+  })
+}
 function LikeBtn(props: { className?: string; name: string }) {
   return (
     <span className={props.className}>
@@ -29,18 +48,24 @@ function LikeBtn(props: { className?: string; name: string }) {
           </span>
         </DrawerTrigger>
         <DrawerContent>
-          <DrawerHeader>
-            <DrawerTitle>
-              Add `<i>{props.name}` to favorite movies </i>?
-            </DrawerTitle>
-            <DrawerDescription>
-              This action can be undone at any time.
-            </DrawerDescription>
-          </DrawerHeader>
-          <DrawerFooter>
-            <Button variant="secondary">Like</Button>
-            <DrawerClose>Cancel</DrawerClose>
-          </DrawerFooter>
+          <div className="max-w-96 py-12 px-4 mx-auto">
+            <DrawerHeader>
+              <DrawerTitle>
+                Add `<i>{props.name}` to favorite movies </i>?
+              </DrawerTitle>
+              <DrawerDescription>
+                This action can be undone at any time.
+              </DrawerDescription>
+            </DrawerHeader>
+            <DrawerFooter>
+              <DrawerClose onClick={() => like(props.name)}>
+                <Button className="w-full" variant="secondary">
+                  Like
+                </Button>
+              </DrawerClose>
+              <DrawerClose>Cancel</DrawerClose>
+            </DrawerFooter>
+          </div>
         </DrawerContent>
       </Drawer>
     </span>
