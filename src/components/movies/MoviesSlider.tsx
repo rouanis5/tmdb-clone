@@ -52,7 +52,7 @@ export default function MoviesSlider({
 }) {
   return (
     <div className="my-14">
-      <Container className="mb-4 sm:flex items-center gap-x-6">
+      <Container className="mb-4 sm:flex items-center gap-x-6 space-y-3 sm:space-y-0">
         <h2 className="text-2xl font-semibold">{title}</h2>
         <MovieSliderNav navData={navData} />
       </Container>

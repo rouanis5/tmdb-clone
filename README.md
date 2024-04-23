@@ -13,9 +13,9 @@ a cutting-edge movie database website clone crafted with the latest technologies
 - [x] deploy to vercel <!-- after changing some vercel build folder -->
 - [x] use nextJs Image component
 - [x] install shadcn
-- [ ] make movie modal or drawer
+- [x] make movie modal or drawer
 - [ ] add a popup to encourage user to go to my portfolio
-- [ ] add favorite movies with a toast msg (locally)
+- [x] add favorite movies with a toast msg (locally)
 - [ ] add upstash rate limiter
 
 ## getting started
