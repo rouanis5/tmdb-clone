@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import Navbar from '@/components/layouts/Navbar'
 import Footer from '@/components/layouts/Footer'
 import { Toaster } from '@/components/ui/sonner'
+import Popup from '@/components/layouts/Popup'
 
 export const metadata: Metadata = {
   title: 'TMDB clone',
@@ -35,6 +36,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Toaster />
+        <Popup />
       </body>
     </html>
   )
