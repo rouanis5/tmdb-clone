@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'no-duplicate-imports': 'error',
+    'react/prop-types': 'off',
   },
   settings: {
     'import/resolver': {
