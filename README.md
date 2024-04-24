@@ -1,10 +1,16 @@
-# MOVIE DATABASE CLONE
-
-| see preview from [here](https://movies-hazel-gamma.vercel.app/)
+# Movies Database Website
 
 <img style="display: block;" src="./mockup.jpeg" alt="movies database clone preview" />
 
-a cutting-edge movie database website clone crafted with the latest technologies. Explore a vast collection of films with ease through our intuitive interface and sleek design. Dive into a world of cinematic wonders with attractive UI features that enhance your browsing experience.
+Welcome to the Movies Database Website project! This repository contains the code for a dynamic and immersive platform where users can browse through a vast collection of movies. With a focus on user experience and cutting-edge technologies, this website aims to provide a seamless cinematic journey for every user.
+
+## Demo
+
+To experience the Movies Database Website in action, you can access the live demo [here](https://movies-hazel-gamma.vercel.app/).
+
+## Description
+
+The Movies Database Website boasts a beautiful user interface, smooth animations, and server-side rendering for optimal performance. Users can effortlessly navigate through the extensive movie database, explore movie details, and find their next favorite film with ease. The project is regularly updated to incorporate the latest advancements in web development, ensuring a modern and responsive browsing experience.
 
 ## Tasks
 
@@ -32,20 +38,25 @@ pnpm dev
 pnpm build
 ```
 
-## Tech stack
+## Technologies
 
-- React
-- NextJs 14
-- TailwindCSS
-- DaisyUI
+- Languages: Typescript
+- Frontend styling: TailwindCSS, daisyUI & Shadecn UI
+- Frontend faramworks: React.js, Next.js
+- Testing: Cypress (end-to-end)
+- APIs: TMDB
+- Hosting: Vercel
 
-## Contributing
+## Contribution
 
-Contributions are always welcome!
+Contributions to the Movies Database Website project are welcome! If you'd like to contribute, please follow these steps:
 
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/new-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/new-feature`).
+6. Create a new Pull Request.
 
 ## License
 
