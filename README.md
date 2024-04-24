@@ -16,6 +16,7 @@ a cutting-edge movie database website clone crafted with the latest technologies
 - [x] make movie modal or drawer
 - [x] add a popup to encourage user to go to my portfolio
 - [x] add favorite movies with a toast msg (locally)
+- [x] add cypress
 - [ ] add upstash rate limiter
 
 ## getting started
